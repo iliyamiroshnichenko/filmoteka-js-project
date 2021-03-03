@@ -26,6 +26,14 @@
 .flex {
   display: flex;
 }
+.header__buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+.button {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
 .error {
   color: red;
   display: none;
@@ -52,7 +60,7 @@
 }
 .nav__links .logo {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .header__link {
   &:not(:last-child) {
@@ -64,6 +72,7 @@
 }
 .header__form {
   margin-top: 45px;
+  display: none;
   @media screen and (min-width: 468px) {
     width: 336px;
     margin-left: auto;
