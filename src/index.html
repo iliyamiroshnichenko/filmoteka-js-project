@@ -17,18 +17,50 @@
   </head>
   <body>
     <header class="header" id="header">
+  <div class="container">
+  <nav class="nav">
+    <div class="nav__links">
+      <a href="" class="logo" id="home">
+        <svg class="logo__icon">
+          <use href="./images/sprite.svg#icon-film"></use>
+        </svg>
+        <p class="logo__title">Filmoteka</p>
+      </a>
+    </div>
+    <ul class="header__links">
+      <li class="header__link">
+        <a href="#" class="link current">Home</a>
+      </li>
+      <li class="header__link">
+        <a href="#" class="link">My Library</a>
+      </li>
+    </ul>
+    </nav>
+<div class="header__form">
+  <form class="search-form" id="search-form">
+    <div class="form__group">
+      <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+      <i class="material-icons search__icon">search</i>
+    </div>
+  </form>
+</div>
+
+</div>
+    </header>
+    <!-- <header class="header" id="header">
       <div class="container">
         <div class="header__container">
           <nav class="header__nav">
-            <a href="" class="logo" id="home">
-              <!-- <svg class="logo__icons">
-                <use href="./images/logo.svg"></use>
-            </svg> -->
-              <div class="logo_links">
-                <p class="link">logo</p>
+            <div class="logo_links">           
+               <a href="" class="logo" id="home">
+              <svg class="logo__icon">
+                <use href="./images/sprite.svg#icon-film"></use>
+            </svg>
+              
                 <p class="logo__title">Filmoteka</p>
-              </div>
+             
             </a>
+            </div>
             <ul class="header__links">
               <li class="header__link">
                 <a href="#" class="link current">Home</a>
@@ -57,12 +89,12 @@
           </p>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- Галерея фильмов -->
     <main>
       <section class="films">
-        <div class="conteiner">
+        <div class="container">
           <ul class="list films__list" id="films-section">
             <li class="card">
               <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />

@@ -4,32 +4,26 @@ body {
   font-family: Roboto, sans-serif;
   font-size: $primary-font-size;
 }
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-p {
-  margin: 0;
-}
 
-img {
-  display: block;
+.container {
   width: 100%;
-  height: auto;
-}
-.conteiner {
   margin-left: auto;
   margin-right: auto;
 
   @include for-size(mobile) {
-    width: 280px;
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @include for-size(tablet) {
-    width: 618px;
+    min-width: 768px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
   @include for-size(desktop) {
-    width: 882px;
+    max-width: 1024px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
