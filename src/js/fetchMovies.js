@@ -5,7 +5,7 @@ const searchMovieUrl = `${basicUrl}search/movie/?api_key=${key}`;
 
 export default {
   searchQuery: 'batman',
-  movieId: 321528,
+  _movieId: 321528,
 
   fetchTrendingMovies() {
     return fetch(trendingMovieUrl)
@@ -19,7 +19,7 @@ export default {
       });
   },
   searchMovies() {
-    return fetch(`${searchMovieUrl}&query=${this.searchQuery}`)
+    return fetch(`${searchMovieUrl}&query=${this.query}`)
       .then(response => {
         if (response.ok) return response.json();
         throw new Error('Error Fetching data');
@@ -39,5 +39,17 @@ export default {
       .catch(error => {
         console.log(error);
       });
+  },
+  get query() {
+    return this.searchQuery;
+  },
+  set query(value) {
+    this.searchQuery = value;
+  },
+  get movieId() {
+    return this._movieId;
+  },
+  set movieId(value) {
+    this._movieId = value;
   },
 };
