@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <title>Filmoteka</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Filmoteka</title>
+  </head>
   <body>
-      <header class="header">
-    <div class="container">
-      <div class="header__container">
-        <nav class="header__nav">
-          <a href="" class="logo" id="home">
-            <!-- <svg class="logo__icons">
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="" class="logo" id="home">
+              <!-- <svg class="logo__icons">
                 <use href="./images/logo.svg"></use>
             </svg> -->
-            <div class="logo_links">
-              <p class="link">logo</p>
-              <p class="logo__title">Filmoteka</p>
-            </div>
-          </a>
-          <ul class="header__links">
-            <li class="header__link"><a href="#" class="link current">Home</a></li>
-            <li class="header__link"><a href="#" class="link">My Library</a></li>
-          </ul>
-        </nav>
-        <div class="header__form">
-          <form class="search-form" id="search-form">
-            <div class="form__group">
-              <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
-              <i class="material-icons search__icon">search</i>
-            </div>
-          </form>
+              <div class="logo_links">
+                <p class="link">logo</p>
+                <p class="logo__title">Filmoteka</p>
+              </div>
+            </a>
+            <ul class="header__links">
+              <li class="header__link">
+                <a href="#" class="link current">Home</a>
+              </li>
+              <li class="header__link">
+                <a href="#" class="link">My Library</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__form">
+            <form class="search-form" id="search-form">
+              <div class="form__group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="query"
+                  autocomplete="off"
+                  placeholder="Поиск фильмов"
+                />
+                <i class="material-icons search__icon">search</i>
+              </div>
+            </form>
+          </div>
+          <p class="error">
+            Search result not successful. Enter the correct movie name and
+          </p>
         </div>
-        <p class="error">Search result not successful. Enter the correct movie name and</p>
       </div>
-    </div>
-  </header>
+    </header>
     <main>
       <section>
         <div class="conteiner">
