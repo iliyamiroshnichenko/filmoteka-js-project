@@ -9,12 +9,10 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  @include for-size(mobile) {
-    min-width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   @include for-size(tablet) {
     min-width: 768px;
     padding-left: 75px;
