@@ -16,7 +16,7 @@
     <title>Filmoteka</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__container">
           <nav class="header__nav">
@@ -63,7 +63,7 @@
     <main>
       <section class="films">
         <div class="container">
-          <ul class="list films__list">
+          <ul class="list films__list" id="films-section">
             <li class="card">
               <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
               <div class="card__text-content">
@@ -130,9 +130,10 @@
           </ul>
         </div>
       </section>
+      <footer id="footer"></footer>
     </main>
 
-      <!--  Модальное окно (щоб подивитись модальне вікно, потрібно розкоментувати opacity в файлі _modal.scss)-->
+    <!--  Модальное окно (щоб подивитись модальне вікно, потрібно розкоментувати opacity в файлі _modal.scss)-->
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="button-close">
@@ -140,39 +141,52 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
-      <img class="modal__poster" src="./img/modal-film-img/modal-mobile.jpg" alt="">
-      <div class="modal__text">
-        <h2 class="modal__title">a fistful of lead</h3>
-        <ul class="modal__list">
-          <li class="modal__item">
-            <p class="modal__item-features">Vote / Votes</p>
-            <p class="modal__item-details"><span class="modal__item-vote">7.3</span> / <span class="modal__item-votes">1260</span></p>
-          </li>
-          <li class="modal__item">
-            <p class="modal__item-features">Popularity</p>
-            <p class="modal__item-details">100.2</p>
-          </li>
-          <li class="modal__item">
-            <p class="modal__item-features">Original Title</p>
-            <p class="modal__item-details">A FISTFUL OF LEAD</p>
-          </li>
-          <li class="modal__item">
-            <p class="modal__item-features">Genre</p>
-            <p class="modal__item-details">Western</p>
-          </li>
-        </ul>
-        <h3 class="modal__description-title">about</h3>
-        <p class="modal__description-text">Four of the West’s most infamous outlaws assemble to steal a huge stash of gold from the most corrupt settlement of the
-        gold rush towns. But not all goes to plan one is killed and the other three escapes with bags of gold hide out in the
-        abandoned gold mine where they happen across another gang of three – who themselves were planning to hit the very same
-        bank! As tensions rise, things go from bad to worse as they realise the bags of gold are filled with lead... they’ve
-        been double crossed – but by who and how?</p>
-        <div class="button-container">
-          <button class="button button-watched" type="button">add to watched</button>
-          <button class="button" type="button">add to queue</button>
+        <img
+          class="modal__poster"
+          src="./img/modal-film-img/modal-mobile.jpg"
+          alt=""
+        />
+        <div class="modal__text">
+          <h2 class="modal__title">a fistful of lead</h2>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <p class="modal__item-features">Vote / Votes</p>
+              <p class="modal__item-details">
+                <span class="modal__item-vote">7.3</span> /
+                <span class="modal__item-votes">1260</span>
+              </p>
+            </li>
+            <li class="modal__item">
+              <p class="modal__item-features">Popularity</p>
+              <p class="modal__item-details">100.2</p>
+            </li>
+            <li class="modal__item">
+              <p class="modal__item-features">Original Title</p>
+              <p class="modal__item-details">A FISTFUL OF LEAD</p>
+            </li>
+            <li class="modal__item">
+              <p class="modal__item-features">Genre</p>
+              <p class="modal__item-details">Western</p>
+            </li>
+          </ul>
+          <h3 class="modal__description-title">about</h3>
+          <p class="modal__description-text">
+            Four of the West’s most infamous outlaws assemble to steal a huge
+            stash of gold from the most corrupt settlement of the gold rush
+            towns. But not all goes to plan one is killed and the other three
+            escapes with bags of gold hide out in the abandoned gold mine where
+            they happen across another gang of three – who themselves were
+            planning to hit the very same bank! As tensions rise, things go from
+            bad to worse as they realise the bags of gold are filled with
+            lead... they’ve been double crossed – but by who and how?
+          </p>
+          <div class="button-container">
+            <button class="button button-watched" type="button">
+              add to watched
+            </button>
+            <button class="button" type="button">add to queue</button>
+          </div>
         </div>
-        
-      </div>
       </div>
     </div>
   </body>
