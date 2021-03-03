@@ -1,0 +1,141 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: white;
+}
+.container {
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 468px) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  @media screen and (min-width: 769px) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.header {
+  position: relative;
+  overflow-x: hidden;
+  background-image: url('../../images/header.jpg');
+  height: 230px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-width: 468px) {
+    background-image: url('../../images/header__tablet.png');
+  }
+  @media screen and (min-width: 769px) {
+    background-image: url('../../images/header__desk.png');
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+.flex {
+  display: flex;
+}
+.error {
+  color: red;
+  display: none;
+}
+.link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.link.current {
+  position: relative;
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff6b08;
+  }
+}
+.header__links {
+  display: flex;
+}
+.header__link {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.header__form {
+  margin-top: 45px;
+  @media screen and (min-width: 468px) {
+    width: 336px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.search-form {
+  display: block;
+}
+.form__group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    border: 0.5px solid #ffffff;
+    // background-color: #ff6b08;
+  }
+}
+// .logo__icons {
+//   width: 24px;
+//   height: 24px;
+//   fill: #818181;
+// }
+.logo_links {
+  display: flex;
+}
+.logo__title {
+  display: none;
+  @media screen and (min-width: 468px) {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.17;
+    color: #ffffff;
+    display: block;
+  }
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  &::placeholder {
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &:focus {
+    border: none;
+  }
+}
