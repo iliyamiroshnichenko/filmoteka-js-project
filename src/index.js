@@ -33,7 +33,6 @@ moviesService.fetchTrendingMovies().then(results => {
         genres.find(({ id }) => id === backebdId),
       );
       genresNames = [...genresNames.map(({ name }) => name)];
-      console.log(genresNames);
       const properties = { id, poster_path, genresNames, year, rating, title };
       return properties;
     },
