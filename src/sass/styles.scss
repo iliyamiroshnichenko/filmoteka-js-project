@@ -1,9 +1,10 @@
 @import './utills/variables';
 @import './utills/mixin';
 @import './base/normalize.scss';
-@import './components/header';
+@import './components/header.scss';
 @import './base/body.scss';
 @import './components/card';
 @import './components/modal.scss';
 @import './components/buttons.scss';
 @import 'paginationjs/dist/pagination.css';
+@import './utills/visually-hidden.scss';
