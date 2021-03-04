@@ -110,8 +110,14 @@
       <footer id="footer"></footer>
     </main>
 
-    <!--  Модальное окно (щоб подивитись модальне вікно, потрібно розкоментувати opacity в файлі _modal.scss)-->
+    <!--  Модальное окно -->
     <div class="backdrop is-hidden">
+      <button class="button-close">
+        <svg width="14" height="14">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <!-- <div class="modal">
       <div class="modal">
         <button type="button" class="button-close">
           <svg width="30" height="30">
@@ -164,7 +170,7 @@
             <button class="button" type="button">add to queue</button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
