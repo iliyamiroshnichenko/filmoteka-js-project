@@ -1,5 +1,5 @@
 import pagination from 'paginationjs/dist/pagination.js';
-import addCardTpl from './markup';
+import { addCardTpl, cleanMarkup, showSpinner, hideSpinner } from './markup';
 import getItems from './getItems';
 
 const basicUrl = 'https://api.themoviedb.org/3/';
@@ -17,13 +17,56 @@ export default {
       },
 
       totalNumberLocator: function (response) {
-        // you can return totalNumber by analyzing response content
-        return Math.floor(Math.random() * (1000 - 100)) + 100;
+        console.log(response);
+        return Number(`${response.total_pages}0`);
+      },
+
+      hideWhenLessThanOnePage: true,
+
+      ajax: {
+        beforeSend: function () {
+          cleanMarkup();
+          showSpinner();
+        },
       },
 
       callback: function (data, pagination) {
         const items = getItems(data);
         console.log(items);
+
+        hideSpinner();
+        addCardTpl(items);
+      },
+    });
+  },
+
+  paginationSearchMovies(searchQuery) {
+    $('#pagination-container').pagination({
+      dataSource: `${searchMovieUrl}&query=${searchQuery}`,
+      locator: 'results',
+      alias: {
+        pageNumber: 'page',
+      },
+
+      // надо пофиксить костыль))
+      totalNumberLocator: function (response) {
+        console.log(response);
+        return Number(`${response.total_pages}0`);
+      },
+
+      hideWhenLessThanOnePage: true,
+
+      ajax: {
+        beforeSend: function () {
+          cleanMarkup();
+          showSpinner();
+        },
+      },
+
+      callback: function (data, pagination) {
+        const items = getItems(data);
+        console.log(items);
+        hideSpinner();
         addCardTpl(items);
       },
     });
