@@ -31,7 +31,6 @@ body.show-modal  .backdrop{
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
-
 }
 
 body.show-modal {
@@ -88,7 +87,6 @@ body.show-modal {
 
   @media screen and (min-width: 1024px) {
     margin-bottom: 0;
-
     min-width: 396px;
     height: 477px;
     margin-right: 30px;
@@ -145,8 +143,6 @@ body.show-modal {
   display: inline-block;
   text-align: center;
   padding: 1px 10px;
-
-
     border-radius: 2px;
     background-color: $footer-bg-color;
     color: $primary-text-color;
@@ -162,7 +158,6 @@ body.show-modal {
 
 .modal__description-text {
   margin-bottom: 20px;
-
   font-size: 12px;
   font-weight: 500;
   line-height: 1.6;

@@ -18,6 +18,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
+
     <header class="header" id="header">
       <div class="container">
         <nav class="nav">
@@ -95,9 +96,21 @@
             Search result not successful. Enter the correct movie name and
           </p>
         </div>
-      </div>
-    </header> -->
-
+      </form>
+    </div>
+    <div class="nav__error is-hidden">
+      <p class="nav__error__message">
+        Search result not successful. Enter the correct movie name and
+      </p>
+    </div>
+    <div class="header__buttons">
+      <button class="button button--watched" type="button">
+        watched
+      </button>
+      <button class="button button-transparent" type="button">queue</button>
+    </div>
+    </div>
+  </header>
     <!-- Галерея фильмов -->
     <main>
       <section class="films">
@@ -164,10 +177,10 @@
             lead... they’ve been double crossed – but by who and how?
           </p>
           <div class="button-container">
-            <button class="button button-watched" type="button">
+            <button class="button button--watched" type="button">
               add to watched
             </button>
-            <button class="button" type="button">add to queue</button>
+            <button class="button button--modal" type="button">add to queue</button>
           </div>
         </div>
       </div> -->

@@ -1,0 +1,65 @@
+.button {
+  display: inline-block;
+  margin: 0;
+  width: 130px;
+  height: 44px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: $white-text-color;
+  &.button--modal {
+    border: 1px solid #000000;
+    color: #000000;
+  }
+}
+.button--watched {
+  margin-right: 15px;
+  border: 1px solid transparent;
+  background-color: $accent-bg-color;
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+}
+.button-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.button-container {
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
+}
+.nav__buttons__button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  &:not(:last-of-type) {
+    margin-right: 40px;
+  }
+}
+.nav__buttons__button.current {
+  position: relative;
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff6b08;
+  }
+}
