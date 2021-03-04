@@ -10,7 +10,7 @@
 
 .card {
   @include for-size(desktop) {
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - 60px) / 3);
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: calc((100% - 30px) / 2);
@@ -32,23 +32,6 @@
   margin-bottom: 0;
 }
 
-.card:nth-child(odd) {
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    margin-right: 30px;
-  }
-}
-.card:not(:nth-child(3n)) {
-  @include for-size(desktop) {
-    margin-right: 30px;
-  }
-}
-
-.card:nth-last-child(-n + 3) {
-  @include for-size(desktop) {
-    margin-bottom: 0;
-  }
-}
-
 .card__text-content {
   padding-top: 10px;
   font-weight: 500;
@@ -63,4 +46,17 @@
 
 .films__paragraph {
   color: $accent-text-color;
+}
+
+.films__rating {
+  color: $white-text-color;
+  background-color: $accent-bg-color;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
 }
