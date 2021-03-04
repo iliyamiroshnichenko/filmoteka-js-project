@@ -8,22 +8,17 @@ export default {
   _movieId: 321528,
 
   fetchTrendingMovies() {
-    return (
-      fetch(trendingMovieUrl)
-        .then(response => {
-          if (response.ok) return response.json();
-          throw new Error('Error Fetching data');
-        })
-        .then(({ results }) => {
-          return results;
-        })
-        // .then(({ id, poster_path, genre_ids, release_date, vote_average }) => {
-        //   console.log(id, poster_path, genre_ids, release_date, vote_average);
-        // })
-        .catch(error => {
-          console.log(error);
-        })
-    );
+    return fetch(trendingMovieUrl)
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Error Fetching data');
+      })
+      .then(({ results }) => {
+        return results;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   },
   searchMovies() {
     return fetch(`${searchMovieUrl}&query=${this.query}`)
@@ -49,6 +44,18 @@ export default {
         console.log(error);
       });
   },
+
+  // getGenres() {
+  //   return fetch(`${basicUrl}genre/movie/list?api_key=${key}`)
+  //     .then(response => {
+  //       if (response.ok) return response.json();
+  //       throw new Error('Error Fetching data');
+  //     })
+  //     .then(({ genres }) => console.log(genres))
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // },
   get query() {
     return this.searchQuery;
   },
