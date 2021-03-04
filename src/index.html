@@ -14,32 +14,87 @@
       rel="stylesheet"
     />
     <title>Filmoteka</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
 
-  <header class="header" id="header">
-    <div class="container">
-    <nav class="nav">
-      <div class="nav__logo">
-        <a href="" class="nav__logo__link">
-          <svg class="nav__logo__link__icon">
-           <use href="./images/sprite.svg#icon-film"></use>
-          </svg>
-          <p class="nav__logo__title">Filmoteka</p>
-        </a>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__links">
+            <a href="" class="logo" id="home">
+              <svg class="logo__icon">
+                <use href="./images/sprite.svg#icon-film"></use>
+              </svg>
+              <p class="logo__title">Filmoteka</p>
+            </a>
+          </div>
+          <ul class="header__links">
+            <li class="header__link">
+              <a href="#" class="link current">Home</a>
+            </li>
+            <li class="header__link">
+              <a href="#" class="link">My Library</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__form">
+          <form class="search-form" id="search-form">
+            <div class="form__group">
+              <input
+                class="form-control"
+                type="text"
+                name="query"
+                autocomplete="off"
+                placeholder="Поиск фильмов"
+              />
+              <i class="material-icons search__icon">search</i>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="nav__buttons">
-        <button class="nav__buttons__button current" id="home">Home</button>
-        <button class="nav__buttons__button" id="library">My Library</button>
-      </div>
-    </nav>
-    <!-- <div class="header__markup" id="header__markup">
-    </div> -->
-    <div class="header__form"> 
-      <form class="search-form" id="search-form">
-        <div class="form__group">
-          <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
-          <i class="material-icons search__icon">search</i>
+    </header>
+    <!-- <header class="header" id="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <div class="logo_links">           
+               <a href="" class="logo" id="home">
+              <svg class="logo__icon">
+                <use href="./images/sprite.svg#icon-film"></use>
+            </svg>
+              
+                <p class="logo__title">Filmoteka</p>
+             
+            </a>
+            </div>
+            <ul class="header__links">
+              <li class="header__link">
+                <a href="#" class="link current">Home</a>
+              </li>
+              <li class="header__link">
+                <a href="#" class="link">My Library</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__form">
+            <form class="search-form" id="search-form">
+              <div class="form__group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="query"
+                  autocomplete="off"
+                  placeholder="Поиск фильмов"
+                />
+                <i class="material-icons search__icon">search</i>
+              </div>
+            </form>
+          </div>
+          <p class="error">
+            Search result not successful. Enter the correct movie name and
+          </p>
         </div>
       </form>
     </div>
@@ -60,81 +115,25 @@
     <main>
       <section class="films">
         <div class="container">
-          <ul class="list films__list" id="films-section">
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="./img/foto-film-gallery/foto-film-mobile.jpg" alt="" />
-              <div class="card__text-content">
-                <h1 class="films__title">GREYHOUND</h1>
-                <p class="films__paragraph">Drama, Action | 2020</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="list films__list" id="films-section"></ul>
+          <!-- пагинация -->
+          <div id="pagination-container"></div>
         </div>
       </section>
       <footer id="footer"></footer>
     </main>
 
-    <!--  Модальное окно (щоб подивитись модальне вікно, потрібно розкоментувати opacity в файлі _modal.scss)-->
+    <!--  Модальное окно -->
     <div class="backdrop is-hidden">
+      <button class="button-close">
+        <svg width="14" height="14">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <!-- <div class="modal">
       <div class="modal">
-        <button class="button-close">
-          <svg width="14" height="14">
+        <button type="button" class="button-close">
+          <svg width="30" height="30">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
@@ -184,7 +183,7 @@
             <button class="button button--modal" type="button">add to queue</button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>

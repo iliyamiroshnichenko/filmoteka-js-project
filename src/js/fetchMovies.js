@@ -1,6 +1,6 @@
 const basicUrl = 'https://api.themoviedb.org/3/';
 const key = '8e2d6c50ec8673fce37d0988f16fea97';
-const trendingMovieUrl = `${basicUrl}trending/movie/day?api_key=${key}`;
+const trendingMovieUrl = `${basicUrl}trending/movie/day?api_key=${key}&per_page=12`;
 const searchMovieUrl = `${basicUrl}search/movie/?api_key=${key}`;
 
 export default {
@@ -13,7 +13,9 @@ export default {
         if (response.ok) return response.json();
         throw new Error('Error Fetching data');
       })
-      .then(({ results }) => console.log(results))
+      .then(({ results }) => {
+        return results;
+      })
       .catch(error => {
         console.log(error);
       });
@@ -24,7 +26,9 @@ export default {
         if (response.ok) return response.json();
         throw new Error('Error Fetching data');
       })
-      .then(({ results }) => console.log(results))
+      .then(({ results }) => {
+        return results;
+      })
       .catch(error => {
         console.log(error);
       });
@@ -35,7 +39,7 @@ export default {
         if (response.ok) return response.json();
         throw new Error('Error Fetching data');
       })
-      .then(data => console.log(data))
+      // .then(data => console.log(data))
       .catch(error => {
         console.log(error);
       });
