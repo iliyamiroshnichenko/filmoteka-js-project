@@ -73,6 +73,17 @@
     display: block;
   }
 }
+.header__buttons__container {
+  display: inline;
+  &:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}
+.search__icon {
+  &:hover {
+    color: #ff6b08;
+  }
+}
 .form-control {
   background-color: transparent;
   border: none;
@@ -89,8 +100,9 @@
     font-size: 14px;
     line-height: 1.14;
   }
+  &:hover,
   &:focus {
-    border: none;
+    outline: none;
   }
 }
 .nav__error {
@@ -108,7 +120,7 @@
 }
 .header__buttons {
   text-align: center;
-  // margin-top: 50px;
+  margin-top: 50px;
 }
 .is-hidden {
   opacity: 0;

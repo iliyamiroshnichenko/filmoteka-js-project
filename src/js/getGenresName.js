@@ -25,7 +25,6 @@ function getGenresName(ids) {
     genres.find(({ id }) => id === backebdId),
   );
   genresNames = [...genresNames.map(({ name }) => name)];
-  console.log(genresNames);
   return genresNames;
 }
 

@@ -23,7 +23,6 @@ export default {
 
       callback: function (data, pagination) {
         const items = getItems(data);
-        console.log(items);
         addCardTpl(items);
       },
     });
