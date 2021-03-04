@@ -1,6 +1,9 @@
 import './sass/styles.scss';
 import moviesService from './js/fetchMovies';
 import addCardTpl from './js/markup';
+import modalTpl from './templates/modal.hbs';
+import './js/modal'
+// import modalTpl from './templates/modal.hbs'
 
 moviesService.fetchTrendingMovies().then(results => {
   console.log(results);
@@ -21,4 +24,7 @@ moviesService.fetchTrendingMovies().then(results => {
 //   addCardTpl(results);
 // });
 // moviesService.searchMovies();
-// moviesService.getFullInfo();
+
+// moviesService.getFullInfo().;
+
+

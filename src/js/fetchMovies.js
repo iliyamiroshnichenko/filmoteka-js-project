@@ -44,7 +44,7 @@ export default {
         if (response.ok) return response.json();
         throw new Error('Error Fetching data');
       })
-      .then(data => console.log(data))
+      // .then(data => console.log(data))
       .catch(error => {
         console.log(error);
       });
