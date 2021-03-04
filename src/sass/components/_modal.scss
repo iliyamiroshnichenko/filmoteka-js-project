@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -10,7 +9,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -133,47 +132,4 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.6;
-}
-
-.button-container {
-  @media screen and (max-width: 1023px) {
-    display: flex;
-  }
-}
-
-.button {
-  display: inline-block;
-  margin: 0;
-  width: 130px;
-  height: 44px;
-  //   border: 0;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.4;
-  text-transform: uppercase;
-  //   border: 1px solid #000000;
-  background-color: transparent;
-  color: $white-text-color;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.button-watched {
-  margin-right: 15px;
-  border: 1px solid transparent;
-  background-color: $accent-bg-color;
-}
-
-.button-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
 }

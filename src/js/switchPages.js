@@ -9,15 +9,13 @@ const pageHome = () => {
         const markup =  headerHomeMarkUp();
         refs.headerUp.innerHTML = "";
         refs.home.classList.add("current");
-        refs.myLibrary.remove("current");
+        refs.myLibrary.classList.remove("current");
         refs.headerUp.insertAdjacentElement('beforeend', markup);
 }
 const library = () => {
         const markup = headerLibraryMarkUp();
         refs.headerUp.innerHTML = "";
         refs.myLibrary.classList.add("current");
-        refs.home.remove("current");
+        refs.home.classList.remove("current");
         refs.headerUp.insertAdjacentElement('beforeend', markup);
 }
-refs.home.addEventListener('click', pageHome());
-refs.myLibrary.addEventListener('click', library());
