@@ -44,18 +44,6 @@ export default {
         console.log(error);
       });
   },
-
-  // getGenres() {
-  //   return fetch(`${basicUrl}genre/movie/list?api_key=${key}`)
-  //     .then(response => {
-  //       if (response.ok) return response.json();
-  //       throw new Error('Error Fetching data');
-  //     })
-  //     .then(({ genres }) => console.log(genres))
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // },
   get query() {
     return this.searchQuery;
   },
