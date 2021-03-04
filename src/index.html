@@ -18,84 +18,30 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
-
-    <header class="header" id="header">
-      <div class="container">
-        <nav class="nav">
-          <div class="nav__links">
-            <a href="" class="logo" id="home">
-              <svg class="logo__icon">
-                <use href="./images/sprite.svg#icon-film"></use>
-              </svg>
-              <p class="logo__title">Filmoteka</p>
-            </a>
-          </div>
-          <ul class="header__links">
-            <li class="header__link">
-              <a href="#" class="link current">Home</a>
-            </li>
-            <li class="header__link">
-              <a href="#" class="link">My Library</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__form">
-          <form class="search-form" id="search-form">
-            <div class="form__group">
-              <input
-                class="form-control"
-                type="text"
-                name="query"
-                autocomplete="off"
-                placeholder="Поиск фильмов"
-              />
-              <i class="material-icons search__icon">search</i>
-            </div>
-          </form>
-        </div>
+<header class="header" id="header">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="" class="nav__logo__link">
+          <svg class="nav__logo__link__icon">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+          <p class="nav__logo__title">Filmoteka</p>
+        </a>
       </div>
-    </header>
-    <!-- <header class="header" id="header">
-      <div class="container">
-        <div class="header__container">
-          <nav class="header__nav">
-            <div class="logo_links">           
-               <a href="" class="logo" id="home">
-              <svg class="logo__icon">
-                <use href="./images/sprite.svg#icon-film"></use>
-            </svg>
-              
-                <p class="logo__title">Filmoteka</p>
-             
-            </a>
-            </div>
-            <ul class="header__links">
-              <li class="header__link">
-                <a href="#" class="link current">Home</a>
-              </li>
-              <li class="header__link">
-                <a href="#" class="link">My Library</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__form">
-            <form class="search-form" id="search-form">
-              <div class="form__group">
-                <input
-                  class="form-control"
-                  type="text"
-                  name="query"
-                  autocomplete="off"
-                  placeholder="Поиск фильмов"
-                />
-                <i class="material-icons search__icon">search</i>
+      <div class="nav__buttons">
+        <button class="nav__buttons__button current" id="home">Home</button>
+        <button class="nav__buttons__button" id="library">My Library</button>
+      </div>
+    </nav>
+    <!-- <div class="header__markup" id="header__markup">
+        </div> -->
+    <div class="header__form">
+      <form class="search-form" id="search-form">
+        <div class="form__group">
+          <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+          <i class="material-icons search__icon">search</i>
               </div>
-            </form>
-          </div>
-          <p class="error">
-            Search result not successful. Enter the correct movie name and
-          </p>
-        </div>
       </form>
     </div>
     <div class="nav__error is-hidden">
