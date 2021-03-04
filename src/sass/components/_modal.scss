@@ -31,6 +31,7 @@ body.show-modal  .backdrop{
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
+
 }
 
 body.show-modal {
@@ -74,61 +75,61 @@ body.show-modal {
 // Content of modal
 
 .modal__poster {
-    width: 240px;
-    margin-bottom: 30px;
+  width: 240px;
+  margin-bottom: 30px;
 
-    @media screen and (min-width: 768px){
-        margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
 
-        width: 264px;
-        height: 360px;
-        margin-right: 30px;   
-    }
+    width: 264px;
+    height: 360px;
+    margin-right: 30px;
+  }
 
-    @media screen and (min-width: 1024px){
-        margin-bottom: 0;
-        
-        min-width: 396px;
-        height: 477px;
-        margin-right: 30px;   
-    }
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 0;
+
+    min-width: 396px;
+    height: 477px;
+    margin-right: 30px;
+  }
 }
 
 .modal__title {
-    font-size: 20px;
-    line-height: 1.15;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 
-    @media screen and (min-width: 1024px){
-        font-size: 30px;  
-    }
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
 }
 
 .modal__list {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal__item {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__item:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .modal__item-features {
-    font-size: 12px;
-    line-height: 1.4;
-    color: $modal-text-color-grey;
+  font-size: 12px;
+  line-height: 1.4;
+  color: $modal-text-color-grey;
 }
 
 .modal__item-details {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.16;
-    color: $primary-text-color-button;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.16;
+  color: $primary-text-color-button;
 }
 
 .modal__item-vote {
@@ -141,9 +142,10 @@ body.show-modal {
 }
 
 .modal__item-votes {
-    display: inline-block;
-    text-align: center;
-    padding: 1px 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 1px 10px;
+
 
     border-radius: 2px;
     background-color: $footer-bg-color;
@@ -151,25 +153,25 @@ body.show-modal {
 }
 
 .modal__description-title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    font-size: 12px;
-    line-height: 1.3;
-    text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .modal__description-text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.6;  
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .button-container {
-     @media screen  and (max-width: 1023px){
-       display: flex;
-}
+  @media screen and (max-width: 1023px) {
+    display: flex;
+  }
 }
 
 .button {
@@ -193,21 +195,28 @@ body.show-modal {
 }
 
 .button-watched {
-    margin-right: 15px;
-    border: 1px solid transparent;
-    background-color: $accent-bg-color;
-    color: $white-text-color;
+  margin-right: 15px;
+  border: 1px solid transparent;
+  background-color: $accent-bg-color;
+  color: $white-text-color;
 }
 
 .button-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-style: none;
+  background-color: white;
+}
+
+.button-close svg {
+  stroke: black;
 }

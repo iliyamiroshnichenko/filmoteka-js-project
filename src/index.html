@@ -14,6 +14,8 @@
       rel="stylesheet"
     />
     <title>Filmoteka</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
     <header class="header" id="header">
@@ -101,6 +103,8 @@
       <section class="films">
         <div class="container">
           <ul class="list films__list" id="films-section"></ul>
+          <!-- пагинация -->
+          <div id="pagination-container"></div>
         </div>
       </section>
       <footer id="footer"></footer>
@@ -114,7 +118,12 @@
         </svg>
       </button>
       <!-- <div class="modal">
-        
+      <div class="modal">
+        <button type="button" class="button-close">
+          <svg width="30" height="30">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
         <img
           class="modal__poster"
           src="./img/modal-film-img/modal-mobile.jpg"
