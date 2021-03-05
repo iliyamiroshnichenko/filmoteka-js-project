@@ -5,7 +5,6 @@ import apiModalInfo from './fetchMovies';
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdropClick.addEventListener('click', onBackdropClick);
-window.addEventListener('keydown', onPressEscape);
 
 function openModal(event) {
   if (event.target.nodeName !== 'IMG') {
@@ -17,6 +16,7 @@ function openModal(event) {
     .getFullInfo()
     .then(renderModalCard)
     .catch(error => console.log(error));
+  window.addEventListener('keydown', onPressEscape);
 }
 
 function onBackdropClick(e) {
@@ -28,6 +28,7 @@ function onBackdropClick(e) {
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
   refs.modal.innerHTML = '';
+  window.removeEventListener('keydown', onPressEscape);
 }
 
 function onPressEscape(event) {
