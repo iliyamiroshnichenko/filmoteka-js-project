@@ -42,7 +42,7 @@ body.show-modal {
 // }
 
 .modal {
-  position: relative;
+  // position: relative;
   // top: 50%;
   // right: 50%;
   // transform: translate(50%, -50%) scale(1);
@@ -67,6 +67,9 @@ body.show-modal {
   }
 }
 
+.modal-relative {
+  position: relative;
+}
 // Content of modal
 
 .modal__poster {
@@ -210,4 +213,5 @@ body.show-modal {
 
 .button-close svg {
   stroke: black;
+  height: 30px;
 }
