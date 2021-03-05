@@ -18,51 +18,61 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
-<header class="header" id="header">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav__logo">
-        <button class="nav__buttons__button nav__logo__link button--logo" id="logo"><svg class="nav__logo__link__icon">
-          <use href="./images/sprite.svg#icon-film"></use>
-        </svg><p class="nav__logo__title ">Filmoteka</p></button>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__logo">
+            <a href="" class="nav__logo__link">
+              <svg class="nav__logo__link__icon">
+                <use href="./images/sprite.svg#icon-film"></use>
+              </svg>
+              <p class="nav__logo__title">Filmoteka</p>
+            </a>
+          </div>
+          <div class="nav__buttons">
+            <button class="nav__buttons__button current" id="home">Home</button>
+            <button class="nav__buttons__button" id="library">
+              My Library
+            </button>
+          </div>
+        </nav>
+        <!-- <div class="header__markup" id="header__markup">
+        </div> -->
+        <div class="header__form">
+          <form class="search-form" id="search-form">
+            <div class="form__group">
+              <input
+                class="form-control"
+                type="text"
+                name="query"
+                autocomplete="off"
+                placeholder="Поиск фильмов"
+              />
+              <i class="material-icons search__icon">search</i>
+            </div>
+          </form>
+        </div>
+        <div class="nav__error is-hidden">
+          <p class="nav__error__message">
+            Search result not successful. Enter the correct movie name and
+          </p>
+        </div>
+        <div class="header__buttons">
+          <button class="button button--watched" type="button">watched</button>
+          <button class="button button-transparent" type="button">queue</button>
+        </div>
       </div>
-      <div class="nav__buttons">
-        <button class="nav__buttons__button" id="home">Home</button>
-        <button class="nav__buttons__button" id="library">My Library</button>
-      </div>
-    </nav>
-        <div class="nav__homePage">
-    <div class="header__form">
-      <form class="search-form" id="search-form">
-        <div class="form__group">
-          <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
-                  <button class="nav__buttons__button"><i class="material-icons search__icon">search</i></button>
-
-              </div>
-      </form>
-    </div>
-    <div class="nav__error">
-      <p class="nav__error__message">
-        Search result not successful. Enter the correct movie name and
-      </p>
-    </div>
-    </div>
-    <div class="header__buttons">
-      <div class="header__buttons__container">
-        <button class="button button--watched" id="watched" type="button">
-          watched
-        </button>
-      </div>
-      <div class="header__buttons__container">
-      <button class="button " id="queue" type="button">queue</button>
-    </div>
-    </div>
-    </div>
-  </header>
+    </header>
     <!-- Галерея фильмов -->
     <main>
       <section class="films">
         <div class="container">
+          <div class="lds-ring spinner spinner-is-hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <ul class="list films__list" id="films-section"></ul>
           <!-- пагинация -->
           <div id="pagination-container"></div>

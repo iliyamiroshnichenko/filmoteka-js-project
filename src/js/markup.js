@@ -6,4 +6,16 @@ function addCardTpl(items) {
   refs.filmsList.insertAdjacentHTML('beforeend', markup);
 }
 
-export default addCardTpl;
+function cleanMarkup() {
+  refs.filmsList.innerHTML = '';
+}
+
+function showSpinner() {
+  refs.spinner.classList.remove('spinner-is-hidden');
+}
+
+function hideSpinner() {
+  refs.spinner.classList.add('spinner-is-hidden');
+}
+
+export { addCardTpl, cleanMarkup, showSpinner, hideSpinner };
