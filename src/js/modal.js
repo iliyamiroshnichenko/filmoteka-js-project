@@ -1,12 +1,22 @@
 import modalTpl from '../templates/modal.hbs';
 import refs from '../js/refs';
 import apiModalInfo from './fetchMovies';
+import addToLibrary from './localStorage';
 
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdropClick.addEventListener('click', onBackdropClick);
 
 function openModal(event) {
+  const movie = event.target;
+  const movieProperties = {
+    title: movie.alt,
+    id: movie.dataset.id,
+    poster: movie.src,
+    genresNames: movie.dataset.genres,
+    year: movie.dataset.year,
+    rating: movie.dataset.rating.slice(0, 3),
+  };
   if (event.target.nodeName !== 'IMG') {
     return;
   }
@@ -15,6 +25,7 @@ function openModal(event) {
   apiModalInfo
     .getFullInfo()
     .then(renderModalCard)
+    .then(() => addToLibrary(movieProperties))
     .catch(error => console.log(error));
   window.addEventListener('keydown', onPressEscape);
 }
