@@ -13,13 +13,18 @@ function addToLibrary(movieProperties) {
 
 function updateLocalStorage(value, key) {
   const arr = JSON.parse(localStorage.getItem(key)) || [];
-  arr.push(value);
-  localStorage.setItem(key, JSON.stringify(arr));
+  for (let i = 0; i < arr.length; i += 1){
+    if (arr[i]["title"] === value.title) {
+      console.log("HURRA");
+      return;
+    } 
+  }
+arr.push(value);
+localStorage.setItem(key, JSON.stringify(arr));
 }
-
-// const ls = JSON.parse(localStorage.getItem('watched'));
-// console.log(ls);
-// console.log(typeof ls);
-// ls.forEach(({ id }) => console.log(id));
-
 export default addToLibrary;
+
+
+
+
+

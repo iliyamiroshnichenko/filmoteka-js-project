@@ -138,3 +138,12 @@
   opacity: 0;
   visibility: hidden;
 }
+.notification {
+  text-align: center;
+  color: #ff6b08;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
