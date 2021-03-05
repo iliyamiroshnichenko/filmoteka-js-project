@@ -9,15 +9,16 @@ const refs = {
   searchForm: document.querySelector('.search-form'),
   spinner: document.querySelector('.spinner'),
   dataContainer: document.querySelector('#dataContainer'),
-  home: document.querySelector("#home"),
-  myLibrary: document.querySelector("#library"),
-  homepage: document.querySelector(".nav__homePage"),
+  home: document.querySelector('#home'),
+  myLibrary: document.querySelector('#library'),
+  homepage: document.querySelector('.nav__homePage'),
   libraryPage: document.querySelector('.header__buttons'),
-  logo: document.querySelector("#logo"),
+  logo: document.querySelector('#logo'),
   header: document.querySelector('.header'),
   error: document.querySelector('.nav__error'),
   queue: document.querySelector('#queue'),
-  watched: document.querySelector('#watched')
+  watched: document.querySelector('#watched'),
+  modal: document.querySelector('.modal'),
 };
 
 export default refs;
