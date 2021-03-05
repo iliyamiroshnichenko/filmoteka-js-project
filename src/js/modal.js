@@ -27,7 +27,7 @@ function onBackdropClick(e) {
 
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
-  refs.backdropClick.innerHTML = '';
+  refs.modal.innerHTML = '';
 }
 
 function onPressEscape(event) {
@@ -37,5 +37,5 @@ function onPressEscape(event) {
 }
 function renderModalCard(data) {
   const markup = modalTpl(data);
-  refs.backdropClick.insertAdjacentHTML('beforeend', markup);
+  refs.modal.insertAdjacentHTML('beforeend', markup);
 }
