@@ -19,6 +19,8 @@ const refs = {
   queue: document.querySelector('#queue'),
   watched: document.querySelector('#watched'),
   modal: document.querySelector('.modal'),
+  paginator: document.querySelector('#pagination-container'),
+  notification: document.querySelector('.notification')
 };
 
 export default refs;
