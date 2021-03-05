@@ -12,7 +12,7 @@ function openModal(event) {
   const movieProperties = {
     title: movie.alt,
     id: movie.dataset.id,
-    poster: movie.src,
+    poster_path: movie.dataset.poster,
     genresNames: movie.dataset.genres,
     year: movie.dataset.year,
     rating: movie.dataset.rating.slice(0, 3),
