@@ -12,13 +12,16 @@ export default {
     $('#pagination-container').pagination({
       dataSource: trendingMovieUrl,
       locator: 'results',
+      prevText: '&#8592;',
+      nextText: '&#8594;',
+      pageSize: 20,
       alias: {
         pageNumber: 'page',
       },
 
       totalNumberLocator: function (response) {
         console.log(response);
-        return Number(`${response.total_pages}0`);
+        return response.total_results;
       },
 
       hideWhenLessThanOnePage: true,
@@ -44,14 +47,17 @@ export default {
     $('#pagination-container').pagination({
       dataSource: `${searchMovieUrl}&query=${searchQuery}`,
       locator: 'results',
+      prevText: '&#8592;',
+      nextText: '&#8594;',
+      pageSize: 20,
+
       alias: {
         pageNumber: 'page',
       },
 
-      // надо пофиксить костыль))
       totalNumberLocator: function (response) {
         console.log(response);
-        return Number(`${response.total_pages}0`);
+        return response.total_results;
       },
 
       hideWhenLessThanOnePage: true,
