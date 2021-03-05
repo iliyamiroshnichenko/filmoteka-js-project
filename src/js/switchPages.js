@@ -5,12 +5,11 @@ window.onload = () => {
   refs.home.classList.add('current');
   refs.error.classList.add('visually-hidden');
   pagination.paginationTrendingMovies();
-  //      refs.header.style.backgroundImage = "url('../images/header.jpg')";
 };
 
 refs.myLibrary.addEventListener('click', libraryPage);
 refs.home.addEventListener('click', homePage);
-// refs.logo.addEventListener('click', homePage);
+refs.logo.addEventListener('click', homePage);
 
 function homePage(event) {
   refs.libraryPage.classList.add('visually-hidden');
@@ -20,18 +19,17 @@ function homePage(event) {
   pagination.paginationTrendingMovies();
   refs.watched.removeEventListener('click', watchedList);
   refs.queue.removeEventListener('click', queueList);
-  refs.header.style.backgroundImage = "url('../images/header.jpg')";
+  refs.header.classList.remove("library");
 }
 function libraryPage(event) {
   refs.homepage.classList.add('visually-hidden');
   refs.libraryPage.classList.remove('visually-hidden');
+  refs.header.classList.add("library");
   refs.myLibrary.classList.add('current');
   refs.home.classList.remove('current');
   refs.filmsList.innerHTML = '';
   refs.watched.addEventListener('click', watchedList);
   refs.queue.addEventListener('click', queueList);
-
-  // refs.header().style.backgroundImage = "url('../images/library-mobile.jpg')";
 }
 function watchedList(event) {
   refs.watched.classList.add('button--watched');
