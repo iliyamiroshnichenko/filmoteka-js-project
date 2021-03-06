@@ -21,6 +21,26 @@
     <p class="notification">Вы еще ничего не добавили</p>
 <header class="header" id="header">
   <div class="container">
+        <div class="toolbar">
+          <!-- Разметка переключателя темы -->
+          <div class="theme-switch">
+            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+              <use href="./images/spriteswitch.svg#sun"></use>
+            </svg>
+        
+            <div class="theme-switch__control">
+              <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
+                aria-label="Переключить между тёмной и светлой темой" />
+              <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+              </label>
+              <div aria-hidden="true" class="theme-switch__marker"></div>
+            </div>
+        
+            <svg class="theme-switch__icon" aria-label="Иконка луны">
+              <use href="./images/spriteswitch.svg#moon"></use>
+            </svg>
+          </div>
+        </div>
     <nav class="nav">
       <div class="nav__logo">
         <button class="nav__buttons__button nav__logo__link button--logo" id="logo"><svg class="nav__logo__link__icon">
