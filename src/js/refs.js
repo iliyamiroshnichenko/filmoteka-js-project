@@ -20,7 +20,8 @@ const refs = {
   watched: document.querySelector('#watched'),
   modal: document.querySelector('.modal'),
   paginator: document.querySelector('#pagination-container'),
-  notification: document.querySelector('.notification')
+  notification: document.querySelector('.notification'),
+  theme: document.querySelector('.theme-switch__title')
 };
 
 export default refs;

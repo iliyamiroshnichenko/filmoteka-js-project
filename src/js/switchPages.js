@@ -4,7 +4,7 @@ import {addCardTpl} from './markup';
 window.onload = () => {
   refs.libraryPage.classList.add('visually-hidden');
   refs.home.classList.add('current');
-  refs.error.classList.add('visually-hidden');
+  // refs.error.classList.add('visually-hidden');
   pagination.paginationTrendingMovies();
   refs.notification.classList.add('visually-hidden');
 };
