@@ -8,8 +8,6 @@ import getItems from './js/getItems';
 import pagination from './js/pagination';
 import refs from './js/refs';
 
-pagination.paginationTrendingMovies();
-
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
 
