@@ -1,6 +1,7 @@
 import refs from './refs';
 
 function addToLibrary(movieProperties) {
+  console.log(movieProperties);
   const addToWatchedBtn = refs.modal.querySelector('#add-to-watched');
   addToWatchedBtn.addEventListener('click', () =>
     updateLocalStorage(movieProperties, 'watched'),
@@ -13,18 +14,13 @@ function addToLibrary(movieProperties) {
 
 function updateLocalStorage(value, key) {
   const arr = JSON.parse(localStorage.getItem(key)) || [];
-  for (let i = 0; i < arr.length; i += 1){
-    if (arr[i]["title"] === value.title) {
-      console.log("HURRA");
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i]['title'] === value.title) {
+      console.log('HURRA');
       return;
-    } 
+    }
   }
-arr.push(value);
-localStorage.setItem(key, JSON.stringify(arr));
+  arr.push(value);
+  localStorage.setItem(key, JSON.stringify(arr));
 }
 export default addToLibrary;
-
-
-
-
-
