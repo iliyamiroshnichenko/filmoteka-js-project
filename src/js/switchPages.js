@@ -4,7 +4,7 @@ import {addCardTpl} from './markup';
 window.onload = () => {
   refs.libraryPage.classList.add('visually-hidden');
   refs.home.classList.add('current');
-  // refs.error.classList.add('visually-hidden');
+  refs.error.classList.add('visually-hidden');
   pagination.paginationTrendingMovies();
   refs.notification.classList.add('visually-hidden');
 };
@@ -22,6 +22,7 @@ function homePage(event) {
   refs.queue.removeEventListener('click', queueList);
   refs.header.classList.remove("library");
   refs.paginator.classList.remove('visually-hidden');
+  refs.notification.classList.add('visually-hidden');  
 }
 function libraryPage(event) {
   refs.homepage.classList.add('visually-hidden');

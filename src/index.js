@@ -11,15 +11,14 @@ import theme from './js/theme';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
-
   const form = event.currentTarget;
   const searchQuery = form.elements.query.value;
   const trimSearchQuery = searchQuery.trim();
-
   if (!trimSearchQuery) {
+    refs.error.classList.remove('visually-hidden')
     return;
   }
-
+  refs.error.classList.add('visually-hidden')
   pagination.paginationSearchMovies(searchQuery);
   form.reset();
 });
