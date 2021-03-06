@@ -1,3 +1,5 @@
+import refs from './refs';
+
 const Theme = {
   LIGHT: "light-theme",
   DARK: "dark-theme",
@@ -8,11 +10,13 @@ const lightTheme = () => {
     localStorage.setItem('theme', Theme.LIGHT);
     document.body.classList.remove(Theme.DARK);
     document.body.classList.add(Theme.LIGHT);
+    refs.theme.textContent = "light theme";
 };
 const darkTheme = () => {
     localStorage.setItem('theme', Theme.DARK);
     document.body.classList.remove(Theme.LIGHT);
-    document.body.classList.add(Theme.DARK);  
+    document.body.classList.add(Theme.DARK);
+    refs.theme.textContent = "dark theme";
 };
 const loadPage = () => {
     if (savedTheme === null) {

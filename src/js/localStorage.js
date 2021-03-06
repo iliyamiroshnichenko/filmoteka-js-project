@@ -9,13 +9,13 @@ function addToLibrary(movieProperties) {
   addToQueueBtn.addEventListener('click', () =>
     updateLocalStorage(movieProperties, 'queue'),
   );
+  
 }
 
 function updateLocalStorage(value, key) {
   const arr = JSON.parse(localStorage.getItem(key)) || [];
   for (let i = 0; i < arr.length; i += 1){
     if (arr[i]["title"] === value.title) {
-      console.log("HURRA");
       return;
     } 
   }
