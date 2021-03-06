@@ -29,8 +29,11 @@
     width: calc((100% - 2 * 30px) / 2);
   }
 
-  margin-right: auto;
-  margin-left: auto;
+  @include for-size(mobile-only) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   margin-top: 30px;
   margin-bottom: 10px;
   overflow: hidden;
