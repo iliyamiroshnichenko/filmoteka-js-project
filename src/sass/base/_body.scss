@@ -6,12 +6,11 @@ body {
 }
 
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // outline: 1px solid tomato;
+  margin: 0 auto;
+  // padding: 0 15px;
+  max-width: 1280px;
+  width: 90%;
 
   @include for-size(tablet) {
     min-width: 768px;
