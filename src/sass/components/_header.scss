@@ -13,6 +13,15 @@
   @media screen and (min-width: 769px) {
     background-image: url('../images/header__desk.png');
   }
+  &.library {
+    background-image: url('../images/library-mobile.jpg');
+    @media screen and (min-width: 468px) {
+      background-image: url('../images/library-mobile.jpg');
+    }
+    @media screen and (min-width: 769px) {
+      background-image: url('../images/library-mobile.jpg');
+    }
+  }
 }
 .nav {
   display: flex;
@@ -71,6 +80,9 @@
     color: #ffffff;
     margin-left: 10px;
     display: block;
+    &:hover {
+      color: #ff6b08;
+    }
   }
 }
 .header__buttons__container {
@@ -125,4 +137,13 @@
 .is-hidden {
   opacity: 0;
   visibility: hidden;
+}
+.notification {
+  text-align: center;
+  color: #ff6b08;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
