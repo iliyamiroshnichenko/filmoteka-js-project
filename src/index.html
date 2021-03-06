@@ -18,15 +18,17 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
-    <p class="notification">Вы еще ничего не добавили</p>
+    <p class="notification">you haven't added films</p>
 <header class="header" id="header">
   <div class="container">
         <div class="toolbar">
+          <p class="theme-switch__title">Light Theme</p>
           <!-- Разметка переключателя темы -->
           <div class="theme-switch">
-            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
-              <use href="./images/spriteswitch.svg#sun"></use>
-            </svg>
+            
+            <!-- <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+              <use href="./images/sprite.svg#sun"></use>
+            </svg> -->
         
             <div class="theme-switch__control">
               <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
@@ -36,9 +38,9 @@
               <div aria-hidden="true" class="theme-switch__marker"></div>
             </div>
         
-            <svg class="theme-switch__icon" aria-label="Иконка луны">
-              <use href="./images/spriteswitch.svg#moon"></use>
-            </svg>
+            <!-- <svg class="theme-switch__icon" aria-label="Иконка луны">
+              <use href="./images/sprite.svg#moon"></use>
+            </svg> -->
           </div>
         </div>
     <nav class="nav">
@@ -58,7 +60,7 @@
       <div class="header__form">
         <form class="search-form" id="search-form">
           <div class="form__group">
-            <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+            <input class="form-control" type="text" name="query" autocomplete="off" placeholder="Search films" />
             <button class="nav__buttons__button"><i class="material-icons search__icon">search</i></button>
 
           </div>
