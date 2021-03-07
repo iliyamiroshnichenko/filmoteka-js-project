@@ -177,14 +177,19 @@ body.show-modal .backdrop {
 }
 
 .button-container {
-  & .button__modal__container {
-    &:last-child {
-      margin-right: 0;
-    }
-    &:nth-child(2n) {
-      margin-right: 0;
+  @media screen and (min-width: 320px) {
+    @media screen and (max-width: 768px) {
+      & .button__modal__container {
+        &:last-child {
+          margin-right: 0;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
     }
   }
+
   @media screen and (max-width: 1023px) {
     display: flex;
     justify-content: center;
