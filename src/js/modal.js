@@ -2,7 +2,7 @@ import modalTpl from '../templates/modal.hbs';
 import refs from '../js/refs';
 import apiModalInfo from './fetchMovies';
 import addToLibrary from './localStorage';
-import {buttonLog} from './buttonLog'
+import { buttonLog } from './buttonLog';
 
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
@@ -21,11 +21,10 @@ function openModal(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-  event.target.style.PointerEvent='none';
-  console.log(event.target);
+  event.target.style.PointerEvent = 'none';
   apiModalInfo.movieId = event.target.dataset.id;
   refs.body.classList.add('show-modal');
-  document.querySelector('html').style.overflow = "hidden";
+  document.querySelector('html').style.overflow = 'hidden';
 
   apiModalInfo
     .getFullInfo()
@@ -33,7 +32,6 @@ function openModal(event) {
     .then(() => addToLibrary(movieProperties))
     .catch(error => error);
   window.addEventListener('keydown', onPressEscape);
-  
 }
 
 function onBackdropClick(e) {
@@ -44,7 +42,7 @@ function onBackdropClick(e) {
 
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
-  document.querySelector('html').style.overflowY = "scroll";
+  document.querySelector('html').style.overflowY = 'scroll';
   refs.modal.innerHTML = '';
   window.removeEventListener('keydown', onPressEscape);
 }
@@ -59,6 +57,3 @@ function renderModalCard(data) {
   refs.modal.insertAdjacentHTML('beforeend', markup);
   buttonLog();
 }
-
-
-
