@@ -15,6 +15,11 @@
   @include for-size(mobile-only) {
     overflow-y: scroll;
   }
+  @media screen and (min-width: 400px) {
+    @media screen and (max-width: 768px) {
+      overflow-y: scroll;
+    }
+  }
 }
 
 body.show-modal {
@@ -32,10 +37,19 @@ body.show-modal .backdrop {
   background-color: #ffffff;
 
   @include for-size(mobile-only) {
-    width: 280px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
     padding: 50px 20px 40px 20px;
   }
-
+  @media screen and (min-width: 400px) {
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 80px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px 20px 40px 20px;
+    }
+  }
   @include for-size(tablet) {
     display: flex;
     width: 618px;
@@ -54,18 +68,23 @@ body.show-modal .backdrop {
   @include for-size(mobile-only) {
     height: 100%;
   }
+  @media screen and (min-width: 400px) {
+    @media screen and (max-width: 768px) {
+      height: 100%;
+    }
+  }
 }
 // Content of modal
 
 .modal__poster {
-  width: 240px;
+  // max-width: 500px;
+  width: 100%;
   margin-bottom: 30px;
   border-radius: 5px;
   object-fit: cover;
 
   @include for-size(tablet) {
     margin-bottom: 0;
-
     width: 264px;
     height: 360px;
     margin-right: 30px;
@@ -158,8 +177,17 @@ body.show-modal .backdrop {
 }
 
 .button-container {
+  & .button__modal__container {
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
   @media screen and (max-width: 1023px) {
     display: flex;
+    justify-content: center;
   }
 }
 

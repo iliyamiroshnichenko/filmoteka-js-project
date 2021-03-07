@@ -21,9 +21,12 @@ function openModal(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
+  event.target.style.PointerEvent='none';
+  console.log(event.target);
   apiModalInfo.movieId = event.target.dataset.id;
   refs.body.classList.add('show-modal');
   document.querySelector('html').style.overflow = "hidden";
+
   apiModalInfo
     .getFullInfo()
     .then(renderModalCard)
