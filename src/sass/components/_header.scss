@@ -39,6 +39,18 @@
   }
 
   &.library {
+    & .nav__buttons__button.current {
+      &:before {
+        content: ' ';
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        width: 77%;
+        height: 3px;
+        transform: translateX(-50%);
+        background-color: #ff6b08;
+      }
+    }
     background-image: url('../images/library-mobile.jpg');
     @media screen and (min-device-pixel-ratio: 2),
       screen and (-webkit-min-device-pixel-ratio: 2),
@@ -105,6 +117,13 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  &:hover,
+  &:focus {
+    .search__icon,
+    .form-control::placeholder {
+      animation: search 2s infinite forwards;
+    }
+  }
   &:before {
     content: ' ';
     position: absolute;
@@ -132,8 +151,9 @@
     color: #ffffff;
     margin-left: 10px;
     display: block;
+    animation: search 5s infinite forwards;
     &:hover {
-      color: #ff6b08;
+      color: $accent-bg-color;
     }
   }
 }
@@ -141,11 +161,6 @@
   display: inline;
   &:not(:last-of-type) {
     margin-right: 15px;
-  }
-}
-.search__icon {
-  &:hover {
-    color: #ff6b08;
   }
 }
 .form-control {
@@ -165,8 +180,24 @@
     line-height: 1.14;
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
+    & + .search {
+      animation: search 2s infinite forwards;
+    }
     outline: none;
+    &::placeholder {
+      color: #ff6b08;
+    }
+  }
+}
+@keyframes search {
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: #ff6b08;
   }
 }
 .nav__error {
@@ -206,19 +237,11 @@
 body.light-theme {
   background-color: #fff;
   color: #333333;
-  // background-position: center;
-  // // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-image: url('../img/light.jpg');
   background-image: url('../img/light-grey-terrazzo.png');
 }
 
 body.dark-theme {
   background-color: #333333;
-  // background-position: center;
-  // // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-image: url('../img/dark.jpg');
   background-image: url('../img/dark-grey-terrazzo.png');
   color: #fff;
   & .modal__item-details {
@@ -267,8 +290,6 @@ body.dark-theme {
 .toolbar {
   display: flex;
   justify-content: flex-end;
-  //
-  // justify-content: flex-end;
   padding-top: 10px;
   @include for-size(tablet) {
     flex-direction: column;
@@ -389,8 +410,3 @@ body.dark-theme {
     transform: translateX(23px);
   }
 }
-
-// .theme-switch__toggle:focus + .theme-switch__track,
-// .theme-switch__toggle:active + .theme-switch__track {
-//   box-shadow: 0 0 0 2px $accent-bg-color;
-// }

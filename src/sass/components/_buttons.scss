@@ -19,7 +19,6 @@
   }
   &:hover,
   &:focus {
-    // color: #ff6b08;
     box-shadow: 0px 10px 100px rgba(255, 107, 1, 1);
   }
   @media screen and (min-width: 768px) {
@@ -27,7 +26,6 @@
   }
 }
 .button--watched {
-  // margin-right: 15px;
   border: 1px solid transparent;
   background-color: $accent-bg-color;
   box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
@@ -102,7 +100,7 @@
     position: absolute;
     bottom: 7px;
     left: 50%;
-    width: 80%;
+    width: 65%;
     height: 3px;
     transform: translateX(-50%);
     background-color: #ff6b08;

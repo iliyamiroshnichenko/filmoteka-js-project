@@ -16,6 +16,7 @@ function homePage(event) {
   refs.homepage.classList.remove('visually-hidden');
   refs.home.classList.add('current');
   refs.myLibrary.classList.remove('current');
+  refs.error.classList.add('visually-hidden');
   refs.filmsList.innerHTML = '';
   pagination.paginationTrendingMovies();
   refs.watched.removeEventListener('click', watchedList);
