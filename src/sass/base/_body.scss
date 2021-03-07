@@ -4,7 +4,9 @@ body {
   font-family: Roboto, sans-serif;
   font-size: $primary-font-size;
 }
-
+html {
+  overflow-y: scroll;
+}
 .container {
   width: 100%;
   margin-left: auto;
