@@ -14,16 +14,17 @@ refs.searchForm.addEventListener('submit', event => {
   const form = event.currentTarget;
   const searchQuery = form.elements.query.value;
   const trimSearchQuery = searchQuery.trim();
+  // debugger
   if (!trimSearchQuery) {
     refs.error.classList.remove('visually-hidden');
     return;
   }
   else {
-  refs.error.classList.add('visually-hidden')
-  pagination.paginationSearchMovies(searchQuery);
-    form.reset();
+    refs.error.classList.add('visually-hidden');
+    refs.filmsList.innerHTML = '';
+    pagination.paginationSearchMovies(searchQuery);
   }
-  pagination.paginationTrendingMovies();
+  form.reset();
 });
 
 // moviesService.searchMovies();

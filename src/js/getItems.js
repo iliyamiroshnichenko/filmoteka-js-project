@@ -15,7 +15,6 @@ function getItems(results) {
       refs.error.classList.remove('visually-hidden');
     return;
     } else {
-      refs.error.classList.add('visually-hidden');
    return items;
   }
 
