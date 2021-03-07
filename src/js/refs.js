@@ -1,7 +1,6 @@
 const refs = {
   filmsList: document.querySelector('#films-section'),
   dataContainer: document.querySelector('#dataContainer'),
-
   backdropClick: document.querySelector('.backdrop'),
   openModal: document.querySelector('.films'),
   body: document.querySelector('body'),
@@ -21,7 +20,8 @@ const refs = {
   modal: document.querySelector('.modal'),
   paginator: document.querySelector('#pagination-container'),
   notification: document.querySelector('.notification'),
-  theme: document.querySelector('.theme-switch__title')
+  theme: document.querySelector('.theme-switch__title'),
+  remove: document.querySelector('#remove')
 };
 
 export default refs;

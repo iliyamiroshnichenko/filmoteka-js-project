@@ -15,12 +15,15 @@ refs.searchForm.addEventListener('submit', event => {
   const searchQuery = form.elements.query.value;
   const trimSearchQuery = searchQuery.trim();
   if (!trimSearchQuery) {
-    refs.error.classList.remove('visually-hidden')
+    refs.error.classList.remove('visually-hidden');
     return;
   }
+  else {
   refs.error.classList.add('visually-hidden')
   pagination.paginationSearchMovies(searchQuery);
-  form.reset();
+    form.reset();
+  }
+  pagination.paginationTrendingMovies();
 });
 
 // moviesService.searchMovies();
