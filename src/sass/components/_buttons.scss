@@ -78,6 +78,9 @@
   &.button--logo {
     text-transform: none;
   }
+  &.search {
+    padding-right: 0;
+  }
 }
 .nav__buttons__button.current {
   position: relative;

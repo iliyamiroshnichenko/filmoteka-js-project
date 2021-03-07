@@ -1,6 +1,8 @@
 import pagination from 'paginationjs/dist/pagination.js';
 import { addCardTpl, cleanMarkup, showSpinner, hideSpinner } from './markup';
 import getItems from './getItems';
+import pag from './pagination';
+import refs from './refs';
 
 const basicUrl = 'https://api.themoviedb.org/3/';
 const key = '8e2d6c50ec8673fce37d0988f16fea97';
@@ -53,7 +55,6 @@ export default {
       },
 
       totalNumberLocator: function (response) {
-        console.log(response);
         return response.total_results;
       },
 
@@ -68,6 +69,9 @@ export default {
 
       callback: function (data, pagination) {
         const items = getItems(data);
+        if(items === undefined){
+          pag.paginationTrendingMovies();
+        }
         hideSpinner();
         addCardTpl(items);
       },
