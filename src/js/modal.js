@@ -16,7 +16,7 @@ function openModal(event) {
     poster_path: movie.dataset.poster,
     genresNames: movie.dataset.genres,
     year: movie.dataset.year,
-    rating: movie.dataset.rating.slice(0, 3),
+    rating: movie.dataset.rating,
   };
   if (event.target.nodeName !== 'IMG') {
     return;
