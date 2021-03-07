@@ -9,6 +9,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 999;
+  overflow-y: scroll;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
@@ -25,22 +26,19 @@ body.show-modal {
 }
 
 .modal {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
   background-color: #ffffff;
 
-  @media screen and (max-width: 767px) {
+  @include for-size(mobile-only) {
     width: 280px;
     padding: 50px 20px 40px 20px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     display: flex;
     width: 618px;
     padding: 40px 30px;
   }
-  @media screen and (min-width: 1024px) {
+  @include for-size(desktop) {
     display: flex;
     min-width: 882px;
     padding: 50px 30px 40px 30px;
@@ -48,7 +46,12 @@ body.show-modal {
 }
 
 .modal-relative {
-  position: relative;
+  position: absolute;
+  
+  @include for-size(mobile-only) {
+      height: 100%;
+  }
+  
 }
 // Content of modal
 
@@ -58,7 +61,7 @@ body.show-modal {
   border-radius: 5px;
   object-fit: cover;
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     margin-bottom: 0;
 
     width: 264px;
@@ -66,7 +69,7 @@ body.show-modal {
     margin-right: 30px;
   }
 
-  @media screen and (min-width: 1024px) {
+ @include for-size(desktop) {
     margin-bottom: 0;
     width: 396px;
     height: 477px;
@@ -80,7 +83,7 @@ body.show-modal {
   text-transform: uppercase;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1024px) {
+  @include for-size(desktop) {
     font-size: 30px;
   }
 }
@@ -91,7 +94,6 @@ body.show-modal {
 
 .modal__item {
   display: flex;
-  justify-content: space-between;
 }
 
 .modal__item:not(:last-child) {
@@ -99,9 +101,18 @@ body.show-modal {
 }
 
 .modal__item-features {
+  width: 100px;
   font-size: 12px;
   line-height: 1.4;
   color: $modal-text-color-grey;
+
+  @include for-size(tablet) {
+      width: 110px;
+  }
+
+  @include for-size(desktop) {
+      width: 152px;
+  }
 }
 
 .modal__item-details {
@@ -154,48 +165,3 @@ body.show-modal {
   stroke: black;
   height: 30px;
 }
-
-
-// .button {
-//   display: inline-block;
-//   margin: 0;
-
-//   width: 130px;
-//   height: 44px;
-//   border: 0;
-//   border-radius: 5px;
-
-//   font-size: 12px;
-//   font-weight: 500;
-//   line-height: 1.4;
-//   text-transform: uppercase;
-//   border: 1px solid #000000;
-//   background-color: #ffffff;
-
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// .button-watched {
-//   margin-right: 15px;
-//   border: 1px solid transparent;
-//   background-color: $accent-bg-color;
-//   color: $white-text-color;
-// }
-
-// .button-close {
-//   position: absolute;
-//   top: 15px;
-//   right: 15px;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   width: 30px;
-//   height: 30px;
-//   padding: 0;
-//   border-style: none;
-//   background-color: white;
-// }
-
