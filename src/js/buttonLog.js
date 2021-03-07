@@ -17,7 +17,8 @@ export function buttonLog() {
         addToWatchedBtn.classList.add('visually-hidden');
         addToQueueBtn.classList.remove('visually-hidden');
         if (addToWatchedBtn.className === ('button button--watched visually-hidden')) {
-        addToWatchedBtn.closest('.button__modal__container').classList.add('visually-hidden');
+          addToWatchedBtn.closest('.button__modal__container').classList.add('visually-hidden');
+          removeBtn.style.marginLeft = "15px";
         }
      } else if (refs.queue.className === ('button button--watched')) {
         addToWatchedBtn.classList.remove('visually-hidden');
