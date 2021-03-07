@@ -9,22 +9,25 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 999;
-  overflow-y: scroll;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-}
-
-body.show-modal .backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+  @include for-size(mobile-only) {
+    overflow-y: scroll;
+  }
 }
 
 body.show-modal {
   overflow: hidden;
+  pointer-events: none;
+  touch-action: none;
 }
+body.show-modal .backdrop {
+  opacity: 1;
+  visibility: visible;
 
+  pointer-events: initial;
+}
 .modal {
   background-color: #ffffff;
 
@@ -47,11 +50,10 @@ body.show-modal {
 
 .modal-relative {
   position: absolute;
-  
+
   @include for-size(mobile-only) {
-      height: 100%;
+    height: 100%;
   }
-  
 }
 // Content of modal
 
@@ -69,7 +71,7 @@ body.show-modal {
     margin-right: 30px;
   }
 
- @include for-size(desktop) {
+  @include for-size(desktop) {
     margin-bottom: 0;
     width: 396px;
     height: 477px;
@@ -107,11 +109,11 @@ body.show-modal {
   color: $modal-text-color-grey;
 
   @include for-size(tablet) {
-      width: 110px;
+    width: 110px;
   }
 
   @include for-size(desktop) {
-      width: 152px;
+    width: 152px;
   }
 }
 

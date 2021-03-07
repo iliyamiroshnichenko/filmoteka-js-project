@@ -23,6 +23,7 @@ function openModal(event) {
   }
   apiModalInfo.movieId = event.target.dataset.id;
   refs.body.classList.add('show-modal');
+  document.querySelector('html').style.overflow = "hidden";
   apiModalInfo
     .getFullInfo()
     .then(renderModalCard)
@@ -40,8 +41,8 @@ function onBackdropClick(e) {
 
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
+  document.querySelector('html').style.overflowY = "scroll";
   refs.modal.innerHTML = '';
-  
   window.removeEventListener('keydown', onPressEscape);
 }
 
