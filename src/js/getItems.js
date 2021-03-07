@@ -12,10 +12,12 @@ function getItems(results) {
     },
   );
     if (items.length === 0) {
-    refs.error.classList.remove('visually-hidden');
+      refs.error.classList.remove('visually-hidden');
     return;
     } else {
       refs.error.classList.add('visually-hidden');
-    return items;
-}}
+   return items;
+  }
+
+}
 export default getItems;

@@ -2,6 +2,7 @@ import modalTpl from '../templates/modal.hbs';
 import refs from '../js/refs';
 import apiModalInfo from './fetchMovies';
 import addToLibrary from './localStorage';
+import {buttonLog} from './buttonLog'
 
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
@@ -26,8 +27,9 @@ function openModal(event) {
     .getFullInfo()
     .then(renderModalCard)
     .then(() => addToLibrary(movieProperties))
-    .catch(error => console.log(error));
+    .catch(error => error);
   window.addEventListener('keydown', onPressEscape);
+  
 }
 
 function onBackdropClick(e) {
@@ -39,6 +41,7 @@ function onBackdropClick(e) {
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
   refs.modal.innerHTML = '';
+  
   window.removeEventListener('keydown', onPressEscape);
 }
 
@@ -50,4 +53,8 @@ function onPressEscape(event) {
 function renderModalCard(data) {
   const markup = modalTpl(data);
   refs.modal.insertAdjacentHTML('beforeend', markup);
+  buttonLog();
 }
+
+
+

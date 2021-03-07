@@ -5,7 +5,7 @@
     <div class="card__text-content">
         <h1 class="films__title">{{title}}</h1>
         <p class="films__paragraph">
-            {{genresNames}} | <span class="year">{{year}}</span>
+            {{#each genresNames}}{{this }} {{/each}} | <span class="year">{{year}}</span>
             <span class="films__rating rating-position">{{rating}}</span>
         </p>
     </div>
