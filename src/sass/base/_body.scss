@@ -3,6 +3,12 @@ body {
   background-color: $primary-bg-color;
   font-family: Roboto, sans-serif;
   font-size: $primary-font-size;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
 html {
   overflow-y: scroll;
