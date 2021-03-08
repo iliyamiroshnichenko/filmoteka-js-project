@@ -8,25 +8,23 @@ import getItems from './js/getItems';
 import pagination from './js/pagination';
 import refs from './js/refs';
 import footer from './js/footer';
-
-
-pagination.paginationTrendingMovies();
+import theme from './js/theme';
+import './js/anchorTop';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
-
   const form = event.currentTarget;
   const searchQuery = form.elements.query.value;
   const trimSearchQuery = searchQuery.trim();
-
+  // debugger
   if (!trimSearchQuery) {
+    refs.error.classList.remove('visually-hidden');
     return;
+  } else {
+    refs.error.classList.add('visually-hidden');
+    refs.filmsList.innerHTML = '';
+    pagination.paginationSearchMovies(searchQuery);
   }
-
-  pagination.paginationSearchMovies(searchQuery);
   form.reset();
 });
 
-// moviesService.searchMovies();
-// moviesService.getFullInfo();
-// moviesService.getFullInfo().;

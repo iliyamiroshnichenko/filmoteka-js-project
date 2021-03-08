@@ -1,7 +1,7 @@
 import getGenresName from './getGenresName';
+import refs from './refs';
 
 function getItems(results) {
-  console.log(results);
   const items = results.map(
     ({ title, id, poster_path, genre_ids, release_date, vote_average }) => {
       const year = release_date ? release_date.slice(0, 4) : null;
@@ -11,6 +11,12 @@ function getItems(results) {
       return properties;
     },
   );
-  return items;
+    if (items.length === 0) {
+      refs.error.classList.remove('visually-hidden');
+    return;
+    } else {
+   return items;
+  }
+
 }
 export default getItems;

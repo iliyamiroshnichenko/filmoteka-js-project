@@ -1,6 +1,6 @@
 import pagination from './pagination';
 import refs from '../js/refs';
-import {addCardTpl} from './markup';
+import { addCardTplLibrary } from './markup';
 window.onload = () => {
   refs.libraryPage.classList.add('visually-hidden');
   refs.home.classList.add('current');
@@ -16,12 +16,14 @@ function homePage(event) {
   refs.homepage.classList.remove('visually-hidden');
   refs.home.classList.add('current');
   refs.myLibrary.classList.remove('current');
+  refs.error.classList.add('visually-hidden');
   refs.filmsList.innerHTML = '';
   pagination.paginationTrendingMovies();
   refs.watched.removeEventListener('click', watchedList);
   refs.queue.removeEventListener('click', queueList);
   refs.header.classList.remove("library");
   refs.paginator.classList.remove('visually-hidden');
+  refs.notification.classList.add('visually-hidden');
 }
 function libraryPage(event) {
   refs.homepage.classList.add('visually-hidden');
@@ -34,26 +36,24 @@ function libraryPage(event) {
   refs.watched.addEventListener('click', watchedList);
   refs.queue.addEventListener('click', queueList);
   refs.paginator.classList.add('visually-hidden');
-  
 }
-function watchedList(event) {
+export function watchedList(event) {
   refs.watched.classList.add('button--watched');
   refs.queue.classList.remove('button--watched');
   getLocalItems("watched");
-  
 }
-function queueList(event) {
+export function queueList(event) {
   refs.queue.classList.add('button--watched');
   refs.watched.classList.remove('button--watched');
-    getLocalItems("queue");
+  getLocalItems("queue");
 }
-function getLocalItems(selectedButton){
-  if (localStorage.getItem(`${selectedButton}`) === null) {
+function getLocalItems(selectedButton) {
+  if ((localStorage.getItem(`${selectedButton}`)) === null){
     refs.filmsList.innerHTML = '';
     refs.notification.classList.remove('visually-hidden');
-  } else {
+    return;
+  } 
     refs.filmsList.innerHTML = '';
     refs.notification.classList.add('visually-hidden');
-    addCardTpl(JSON.parse(localStorage.getItem(`${selectedButton}`)));
-  }
+    addCardTplLibrary(JSON.parse(localStorage.getItem(`${selectedButton}`)));
 }

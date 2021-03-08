@@ -1,6 +1,8 @@
 import pagination from 'paginationjs/dist/pagination.js';
 import { addCardTpl, cleanMarkup, showSpinner, hideSpinner } from './markup';
 import getItems from './getItems';
+import pag from './pagination';
+import refs from './refs';
 
 const basicUrl = 'https://api.themoviedb.org/3/';
 const key = '8e2d6c50ec8673fce37d0988f16fea97';
@@ -12,13 +14,15 @@ export default {
     $('#pagination-container').pagination({
       dataSource: trendingMovieUrl,
       locator: 'results',
+      prevText: '&#8592;',
+      nextText: '&#8594;',
+      pageSize: 20,
       alias: {
         pageNumber: 'page',
       },
 
       totalNumberLocator: function (response) {
-        console.log(response);
-        return Number(`${response.total_pages}0`);
+        return response.total_results;
       },
 
       hideWhenLessThanOnePage: true,
@@ -32,8 +36,6 @@ export default {
 
       callback: function (data, pagination) {
         const items = getItems(data);
-        console.log(items);
-
         hideSpinner();
         addCardTpl(items);
       },
@@ -44,14 +46,16 @@ export default {
     $('#pagination-container').pagination({
       dataSource: `${searchMovieUrl}&query=${searchQuery}`,
       locator: 'results',
+      prevText: '&#8592;',
+      nextText: '&#8594;',
+      pageSize: 20,
+
       alias: {
         pageNumber: 'page',
       },
 
-      // надо пофиксить костыль))
       totalNumberLocator: function (response) {
-        console.log(response);
-        return Number(`${response.total_pages}0`);
+        return response.total_results;
       },
 
       hideWhenLessThanOnePage: true,
@@ -65,7 +69,9 @@ export default {
 
       callback: function (data, pagination) {
         const items = getItems(data);
-        console.log(items);
+        if(items === undefined){
+          pag.paginationTrendingMovies();
+        }
         hideSpinner();
         addCardTpl(items);
       },
