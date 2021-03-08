@@ -8,6 +8,7 @@ import getItems from './js/getItems';
 import pagination from './js/pagination';
 import refs from './js/refs';
 import theme from './js/theme';
+import './js/anchorTop';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -18,8 +19,7 @@ refs.searchForm.addEventListener('submit', event => {
   if (!trimSearchQuery) {
     refs.error.classList.remove('visually-hidden');
     return;
-  }
-  else {
+  } else {
     refs.error.classList.add('visually-hidden');
     refs.filmsList.innerHTML = '';
     pagination.paginationSearchMovies(searchQuery);
