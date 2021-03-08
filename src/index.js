@@ -7,6 +7,8 @@ import './js/modal';
 import getItems from './js/getItems';
 import pagination from './js/pagination';
 import refs from './js/refs';
+import footer from './js/footer';
+
 
 pagination.paginationTrendingMovies();
 
