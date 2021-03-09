@@ -5,6 +5,7 @@ const refs = {
   openModal: document.querySelector('.films'),
   body: document.querySelector('body'),
   closeModalBtn: document.querySelector('.button-close'),
+  spinnerInModal: document.querySelector('.spinnerInModal'),
   searchForm: document.querySelector('#search-form'),
   spinner: document.querySelector('.spinner'),
   dataContainer: document.querySelector('#dataContainer'),
@@ -21,7 +22,7 @@ const refs = {
   paginator: document.querySelector('#pagination-container'),
   notification: document.querySelector('.notification'),
   theme: document.querySelector('.theme-switch__title'),
-  remove: document.querySelector('#remove')
+  remove: document.querySelector('#remove'),
 };
 
 export default refs;

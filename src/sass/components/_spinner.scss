@@ -1,6 +1,9 @@
 .spinner-is-hidden {
   display: none;
 }
+.lds-ring.spinnerInModal {
+  position: absolute;
+}
 .lds-ring {
   // display: inline-block;
   position: relative;

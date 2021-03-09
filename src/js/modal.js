@@ -3,12 +3,14 @@ import refs from '../js/refs';
 import apiModalInfo from './fetchMovies';
 import addToLibrary from './localStorage';
 import { buttonLog } from './buttonLog';
+import { showSpinnerInModal, hideSpinnerInModal } from './markup';
 
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdropClick.addEventListener('click', onBackdropClick);
 
 function openModal(event) {
+  showSpinnerInModal();
   const movie = event.target;
   const movieProperties = {
     title: movie.alt,
@@ -29,8 +31,14 @@ function openModal(event) {
   apiModalInfo
     .getFullInfo()
     .then(renderModalCard)
-    .then(() => addToLibrary(movieProperties))
-    .catch(error => error);
+    .then(() => {
+      addToLibrary(movieProperties);
+    })
+    .catch(error => error)
+    .finally(() => {
+      hideSpinnerInModal();
+    });
+
   window.addEventListener('keydown', onPressEscape);
 }
 
