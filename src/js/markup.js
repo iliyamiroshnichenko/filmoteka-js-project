@@ -6,7 +6,7 @@ function addCardTpl(items) {
   refs.filmsList.insertAdjacentHTML('beforeend', markup);
 }
 function addCardTplLibrary(items) {
-    for (let i = 0; i < items.length; i += 1){
+  for (let i = 0; i < items.length; i += 1) {
     items[i]['genresNames'] = items[i]['genresNames'].split(',');
   }
   const markup = cardTpl(items);
@@ -25,4 +25,20 @@ function hideSpinner() {
   refs.spinner.classList.add('spinner-is-hidden');
 }
 
-export { addCardTpl, cleanMarkup, showSpinner, hideSpinner, addCardTplLibrary};
+function showSpinnerInModal() {
+  refs.spinnerInModal.classList.remove('spinner-is-hidden');
+}
+
+function hideSpinnerInModal() {
+  refs.spinnerInModal.classList.add('spinner-is-hidden');
+}
+
+export {
+  addCardTpl,
+  cleanMarkup,
+  showSpinner,
+  hideSpinner,
+  addCardTplLibrary,
+  showSpinnerInModal,
+  hideSpinnerInModal,
+};
