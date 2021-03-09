@@ -1,15 +1,15 @@
 import './sass/styles.scss';
-import moviesService from './js/fetchMovies';
-import switchPage from './js/switchPages';
-import addCardTpl from './js/markup';
-import modalTpl from './templates/modal.hbs';
 import './js/modal';
-import getItems from './js/getItems';
+import './js/theme';
+import './js/anchorTop';
 import pagination from './js/pagination';
 import refs from './js/refs';
-import footer from './js/footer';
-import theme from './js/theme';
-import './js/anchorTop';
+import './js/footer';
+// import moviesService from './js/fetchMovies';
+// import switchPage from './js/switchPages';
+// import addCardTpl from './js/markup';
+// import modalTpl from './templates/modal.hbs';
+// import getItems from './js/getItems';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -27,4 +27,3 @@ refs.searchForm.addEventListener('submit', event => {
   }
   form.reset();
 });
-
