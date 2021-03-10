@@ -7,17 +7,20 @@ window.addEventListener('scroll', event => {
     elem.style.display = 'none';
   }
 });
-$(document).ready(function(){
-  $(".pulse").on('click', function(event) {
-    if (this.hash !== "") {
+$(document).ready(function () {
+  $('.pulse').on('click', function (event) {
+    if (this.hash !== '') {
       event.preventDefault();
       const hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 3500, function(){
-        window.location.hash = hash;
-      });
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1500,
+        function () {
+          window.location.hash = hash;
+        },
+      );
     }
   });
 });
-
