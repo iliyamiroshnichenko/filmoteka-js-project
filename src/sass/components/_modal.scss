@@ -63,22 +63,16 @@ body.show-modal .backdrop {
 }
 
 .modal-relative {
-  width: 100%;
   position: absolute;
 
   @include for-size(mobile-only) {
-    height: 100%;
-  }
-  @media screen and (min-width: 400px) {
-    @media screen and (max-width: 768px) {
-      height: 100%;
-    }
+    top: 0;
+    width: 100%;
   }
 }
 // Content of modal
 
 .modal__poster {
-  // max-width: 500px;
   width: 100%;
   margin-bottom: 30px;
   border-radius: 5px;
