@@ -15,20 +15,7 @@
     />
     <title>Filmoteka</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-      let t;
-      function up() {
-        let top = Math.max(
-          document.body.scrollTop,
-          document.documentElement.scrollTop,
-        );
-        if (top > 0) {
-          window.scrollBy(0, (top + 100) / -10);
-          t = setTimeout('up()', 20);
-        } else clearTimeout(t);
-        return false;
-      }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <p class="notification">you haven't added films</p>
@@ -130,9 +117,7 @@
 
     <!-- ссылка наверх -->
     <div id="gototop" class="anchor wrapper">
-      <a class="pulse" href="#" onclick="return up()">
-        <img src="./images/up-1.png " />
-      </a>
+      <a class="pulse" href="#header"> <img src="./images/up-1.png " /> </a>
     </div>
 
     <!--  Модальное окно -->
