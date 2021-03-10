@@ -9,7 +9,7 @@ export default [
     {
         name: 'Iryna',
         surname: 'Zotovych',
-        photo: '',
+        photo: '../img/irynazotovych.jpg',
         github: 'https://github.com/KapirkaZ',
         position: 'Scrum Master'
     },
@@ -24,14 +24,14 @@ export default [
     {
         name: 'Snizhana',
         surname: 'Mykhaylova',
-        photo: '',
+        photo: './images/home-mobile.jpg',
         github: 'https://github.com/Snizhana-Mykhaylova',
         position: 'Developer'
     },
     {
         name: 'Iryna',
         surname: 'Chyryk',
-        photo: './images/team/IrynaCH.jpg',
+        photo: './images/irynach.jpg',
         github: 'https://github.com/ichyryk',
         position: 'Developer'
     },

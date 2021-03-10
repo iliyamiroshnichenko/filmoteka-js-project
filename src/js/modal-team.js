@@ -3,19 +3,17 @@ import footerTpl from '../templates/footer.hbs'
 import team from '../js/team';
 
 const refs = {
-    teamModalBackdrop: document.querySelector('.team-backdrop'),
     openTeam: document.querySelector('.footer__link'),
     body: document.querySelector('body'),
-    teamModal: document.querySelector('.js-team'),
+    list: document.querySelector('.team-list')
     
 }
 
 refs.openTeam.addEventListener('click', onOpenModal);
-refs.teamModalBackdrop.addEventListener('click', onBackdropClick) 
-renderTeamModal(data);
 
-function onOpenModal() { 
+function onOpenModal(event) { 
     refs.body.classList.add('show-modal');
+    renderTeamModal(team);
     window.addEventListener('keydown', onKeyPress);
 }
 
@@ -30,14 +28,7 @@ function onCloseModal() {
     window.removeEventListener('keydown', onKeyPress)
 }
 
-function onBackdropClick(e) { 
-    if (e.target === e.currentTarget) { 
-        onCloseModal();
-    }
-}
-
-
 function renderTeamModal(data) {
-    const markup = teamModalTpl(data);
-    refs.teamModal.insertAdjacentHTML('beforeend', markup)
+    const markup = teamModalTpl(team);
+    refs.list.insertAdjacentHTML('beforeend', markup)
 }
