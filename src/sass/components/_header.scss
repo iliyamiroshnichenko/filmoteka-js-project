@@ -219,23 +219,16 @@
   text-align: center;
   margin-top: 40px;
 }
-// .is-hidden {
-//   opacity: 0;
-//   visibility: hidden;
-// }
 .notification {
   text-align: center;
   color: #ff6b08;
   font-size: 40px;
   position: absolute;
   text-transform: uppercase;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
 }
-
-// switch theme
-
 body.light-theme {
   background-color: #fff;
   color: #333333;
