@@ -63,6 +63,7 @@ body.show-modal .backdrop {
 }
 
 .modal-relative {
+  width: 100%;
   position: absolute;
 
   @include for-size(mobile-only) {
