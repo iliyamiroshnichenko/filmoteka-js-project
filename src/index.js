@@ -6,6 +6,7 @@ import './js/searchMovies';
 import pagination from './js/pagination';
 import refs from './js/refs';
 import './js/footer';
+import './js/modal-team';
 // import moviesService from './js/fetchMovies';
 // import switchPage from './js/switchPages';
 // import addCardTpl from './js/markup';
