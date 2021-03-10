@@ -12,7 +12,6 @@ main {
 }
 html {
   overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 .container {
   width: 100%;
@@ -54,7 +53,6 @@ html {
 }
 
 .anchor:hover {
-  transform: scale(1.05);
   transition: 1s;
   border-radius: 50%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -65,17 +63,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 48px;
-  // height: 48px;
-  // color: gray;
-
   border-radius: 50px / 100px;
   animation: radial-pulse 3s infinite;
 }
 
 .wrapper {
-  // width: 25%;
-
   align-items: center;
   justify-content: center;
 }
@@ -86,6 +78,6 @@ html {
   }
 
   100% {
-    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
 }
