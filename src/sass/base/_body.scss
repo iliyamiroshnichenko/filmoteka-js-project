@@ -23,13 +23,13 @@ html {
 
   @include for-size(tablet) {
     min-width: 768px;
-    padding-left: 75px;
-    padding-right: 75px;
+    // padding-left: 75px;
+    // padding-right: 75px;
   }
   @include for-size(desktop) {
     max-width: 1024px;
-    padding-left: 70px;
-    padding-right: 70px;
+    // padding-left: 70px;
+    // padding-right: 70px;
   }
 }
 
