@@ -4,9 +4,15 @@
 }
 
 .films__list {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: -5px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: -10px;
+  }
 }
 
 .card {
@@ -22,12 +28,21 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  @include for-size(desktop) {
-    width: calc((100% - 3 * 30px) / 4);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    width: calc((100% - 1 * 30px) / 2);
+  @media screen and (min-width: 1140px) {
+    width: calc((100% - 8 * 10px) / 4);
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 500px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   @media screen and (min-width: 400px) {
@@ -36,13 +51,6 @@
       margin-left: auto;
     }
   }
-  @include for-size(mobile-only) {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  margin-top: 30px;
-  margin-bottom: 10px;
   overflow: hidden;
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,18 +59,6 @@
   &:focus {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(173, 167, 167, 0.2);
-  }
-}
-
-.card:nth-child(odd) {
-  @include for-size(tablet) {
-    margin-right: 30px;
-  }
-}
-
-.card:not(:nth-child(4n)) {
-  @include for-size(desktop) {
-    margin-right: 30px;
   }
 }
 
