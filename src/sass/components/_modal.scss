@@ -13,7 +13,7 @@
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-   @include for-size(mobile-only) {
+  @include for-size(mobile-only) {
     overflow-y: scroll;
   }
 }
@@ -41,14 +41,14 @@ body.show-modal {
     padding: 50px 20px 40px 20px;
   }
 
-   @media screen and (min-width: 400px) {
-     @media screen and (max-width: 768px) {
-       width: calc(100% - 80px);
-       margin-left: auto;
-       margin-right: auto;
-       padding: 50px 20px 40px 20px;
-     }
-   }
+  @media screen and (min-width: 400px) {
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 80px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px 20px 40px 20px;
+    }
+  }
 
   @include for-size(tablet) {
     display: flex;
@@ -64,16 +64,17 @@ body.show-modal {
 
 .modal-relative {
   position: absolute;
-  
+
   @include for-size(mobile-only) {
     top: 0;
+    width: 100%;
   }
-  
-   @media screen and (min-width: 400px) {
-     @media screen and (max-width: 768px) {
-       height: 100%;
-     }
-   }
+
+  @media screen and (min-width: 400px) {
+    @media screen and (max-width: 768px) {
+      height: 100%;
+    }
+  }
 }
 // Content of modal
 
@@ -91,7 +92,7 @@ body.show-modal {
     margin-right: 30px;
   }
 
- @include for-size(desktop) {
+  @include for-size(desktop) {
     margin-bottom: 0;
     width: 396px;
     height: 477px;
@@ -129,11 +130,11 @@ body.show-modal {
   color: $modal-text-color-grey;
 
   @include for-size(tablet) {
-      width: 110px;
+    width: 110px;
   }
 
   @include for-size(desktop) {
-      width: 152px;
+    width: 152px;
   }
 }
 
