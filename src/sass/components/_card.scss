@@ -39,7 +39,6 @@
   }
 
   @media screen and (max-width: 767px) {
-    max-width: 500px;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -64,9 +63,9 @@
   }
 }
 
-// .card:hover {
-
-// }
+.card img {
+  width: 100%;
+}
 
 .card__text-content {
   padding-top: 10px;
