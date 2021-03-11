@@ -67,7 +67,6 @@ body.show-modal {
   
   @include for-size(mobile-only) {
     top: 0;
-    width: 100%;
   }
   
    @media screen and (min-width: 400px) {
