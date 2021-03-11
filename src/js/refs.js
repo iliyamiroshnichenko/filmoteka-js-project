@@ -1,4 +1,5 @@
 const refs = {
+  openTeam: document.querySelector('.footer__link'),
   filmsList: document.querySelector('#films-section'),
   dataContainer: document.querySelector('#dataContainer'),
   backdropClick: document.querySelector('.backdrop'),

@@ -3,19 +3,17 @@ import footerTpl from '../templates/footer.hbs';
 import team from '../js/team';
 
 const refs = {
-  teamModalBackdrop: document.querySelector('.team-backdrop'),
-  openTeam: document.querySelector('.footer__link'),
-  body: document.querySelector('body'),
-  teamModal: document.querySelector('.js-team'),
-};
+    openTeam: document.querySelector('.footer__link'),
+    body: document.querySelector('body'),
+    list: document.querySelector('.team-list') 
+}
 
 refs.openTeam.addEventListener('click', onOpenModal);
-// refs.teamModalBackdrop.addEventListener('click', onBackdropClick)
-// renderTeamModal(data);
 
-function onOpenModal() {
-  refs.body.classList.add('show-modal');
-  window.addEventListener('keydown', onKeyPress);
+function onOpenModal(event) { 
+    refs.body.classList.add('show-modal');
+    renderTeamModal(team);
+    window.addEventListener('keydown', onKeyPress);
 }
 
 function onKeyPress(event) {
@@ -29,13 +27,14 @@ function onCloseModal() {
   window.removeEventListener('keydown', onKeyPress);
 }
 
+
+function renderTeamModal(data) {
+    const markup = teamModalTpl(team);
+    refs.list.insertAdjacentHTML('beforeend', markup)
+}
+
 function onBackdropClick(e) {
   if (e.target === e.currentTarget) {
     onCloseModal();
   }
-}
-
-function renderTeamModal(data) {
-  const markup = teamModalTpl(data);
-  refs.teamModal.insertAdjacentHTML('beforeend', markup);
 }

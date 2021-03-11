@@ -4,10 +4,15 @@ import apiModalInfo from './fetchMovies';
 import addToLibrary from './localStorage';
 import { buttonLog } from './buttonLog';
 import { showSpinnerInModal, hideSpinnerInModal } from './markup';
+import teamModalTpl from '../templates/team.hbs'
+import footerTpl from '../templates/footer.hbs'
+import team from '../js/team';
+
 
 refs.openModal.addEventListener('click', openModal);
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdropClick.addEventListener('click', onBackdropClick);
+
 
 function openModal(event) {
   showSpinnerInModal();
