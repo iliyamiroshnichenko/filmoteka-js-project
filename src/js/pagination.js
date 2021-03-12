@@ -7,7 +7,7 @@ import refs from './refs';
 const basicUrl = 'https://api.themoviedb.org/3/';
 const key = '8e2d6c50ec8673fce37d0988f16fea97';
 const trendingMovieUrl = `${basicUrl}trending/movie/day?api_key=${key}&per_page=12`;
-const searchMovieUrl = `${basicUrl}search/movie/?api_key=${key}`;
+const searchMovieUrl = `${basicUrl}search/movie/`;
 
 export default {
   paginationTrendingMovies() {
@@ -44,7 +44,7 @@ export default {
 
   paginationSearchMovies(searchQuery) {
     $('#pagination-container').pagination({
-      dataSource: `${searchMovieUrl}&query=${searchQuery}`,
+      dataSource: `${searchMovieUrl}?query=${searchQuery}&api_key=${key}`,
       locator: 'results',
       prevText: '&#8592;',
       nextText: '&#8594;',
@@ -69,7 +69,7 @@ export default {
 
       callback: function (data, pagination) {
         const items = getItems(data);
-        if(items === undefined){
+        if (items === undefined) {
           pag.paginationTrendingMovies();
         }
         hideSpinner();
