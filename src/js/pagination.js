@@ -7,7 +7,7 @@ import refs from './refs';
 const basicUrl = 'https://api.themoviedb.org/3/';
 const key = '8e2d6c50ec8673fce37d0988f16fea97';
 const trendingMovieUrl = `${basicUrl}trending/movie/day?api_key=${key}&per_page=12`;
-const searchMovieUrl = `${basicUrl}search/movie/`;
+const searchMovieUrl = `${basicUrl}search/movie`;
 
 export default {
   paginationTrendingMovies() {
