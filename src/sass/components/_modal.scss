@@ -33,11 +33,7 @@ body.show-modal {
 .modal {
   background-color: #ffffff;
 
-  @include for-size(mobile-tablet-only) {
-    width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 280px;
+  @include for-size(mobile-only) {
     padding: 50px 20px 40px 20px;
   }
 
@@ -58,6 +54,10 @@ body.show-modal {
 
   @include for-size(mobile-only) {
     top: 0;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 280px;
   }
 }
 // Content of modal

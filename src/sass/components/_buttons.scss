@@ -43,15 +43,8 @@
   cursor: pointer;
   border-style: none;
   background-color: white;
-  @include for-size(mobile-tablet-only) {
-    top: 10px;
-    right: 25px;
-  }
-
-  @include for-size(tablet) {
-    top: 10px;
-    right: 10px;
-  }
+  top: 10px;
+  right: 10px;
 }
 .button__modal__container {
   display: inline;
