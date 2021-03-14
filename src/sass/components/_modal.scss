@@ -33,21 +33,12 @@ body.show-modal {
 .modal {
   background-color: #ffffff;
 
-  @include for-size(mobile-only) {
+  @include for-size(mobile-tablet-only) {
     width: calc(100% - 40px);
     margin-left: auto;
     margin-right: auto;
-    width: 280px;
+    min-width: 280px;
     padding: 50px 20px 40px 20px;
-  }
-
-  @media screen and (min-width: 400px) {
-    @media screen and (max-width: 768px) {
-      width: calc(100% - 80px);
-      margin-left: auto;
-      margin-right: auto;
-      padding: 50px 20px 40px 20px;
-    }
   }
 
   @include for-size(tablet) {
@@ -67,13 +58,6 @@ body.show-modal {
 
   @include for-size(mobile-only) {
     top: 0;
-    width: 100%;
-  }
-
-  @media screen and (min-width: 400px) {
-    @media screen and (max-width: 768px) {
-      height: 100%;
-    }
   }
 }
 // Content of modal
