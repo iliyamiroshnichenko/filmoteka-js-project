@@ -43,20 +43,8 @@
   cursor: pointer;
   border-style: none;
   background-color: white;
-  @include for-size(mobile-only) {
-    top: 10px;
-    right: 25px;
-  }
-  @media screen and (min-width: 400px) {
-    @media screen and (max-width: 768px) {
-      top: 10px;
-      right: 50px;
-    }
-  }
-  @include for-size(tablet) {
-    top: 15px;
-    right: 15px;
-  }
+  top: 10px;
+  right: 10px;
 }
 .button__modal__container {
   display: inline;
