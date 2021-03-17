@@ -17,6 +17,7 @@ function onOpenModal(event) {
   refs.body.classList.add('show-modal');
   renderTeamModal(team);
   window.addEventListener('keydown', onKeyPress);
+  document.querySelector('html').style.overflow = 'hidden';
 }
 
 function onKeyPress(event) {
@@ -28,6 +29,8 @@ function onKeyPress(event) {
 function onCloseModal() {
   refs.body.classList.remove('show-modal');
   window.removeEventListener('keydown', onKeyPress);
+  refs.team.innerHTML = '';
+  document.querySelector('html').style.overflowY = 'scroll';
 }
 
 function renderTeamModal(data) {
